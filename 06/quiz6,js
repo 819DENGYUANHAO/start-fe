@@ -1,0 +1,20 @@
+const $num = document.querySelector('#num'); // 숫자 입력 요소를 가져옵니다.
+const $btn = document.querySelector('#btn'); // 버튼 요소를 가져옵니다.
+const $result = document.querySelector('#result'); // 결과 표시 요소를 가져옵니다.
+
+// 버튼 클릭 이벤트를 감지하고 콜백 함수를 실행합니다.
+$btn.addEventListener('click', () => {
+let temp = parseInt($num.value); // 입력된 숫자를 정수로 변환하여 temp 변수에 저장합니다.
+let result = ''; // 결과 문자열을 저장할 변수입니다.
+
+if (isNaN(temp)) {
+    alert('숫자를 입력하세요'); // 입력된 값이 숫자가 아니면 경고 창을 띄웁니다.
+} 
+else {
+    // 1부터 9까지의 숫자와 입력된 숫자의 곱셈을 반복하여 결과 문자열을 생성합니다.
+    for (let i = 1; i < 10; i++) {
+        result += `${temp} x ${i} = ${temp * i}<br>`; // 각 곱셈 문장과 결과를 result에 추가합니다.
+    }
+    // 결과 문자열을 결과 표시 요소에 렌더링합니다.
+    $result.innerHTML = result;
+}
