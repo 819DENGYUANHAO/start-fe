@@ -1,0 +1,16 @@
+{
+    "name": "melon",
+    "version": "1.0.0",
+    "description": "A project for fetching and processing Melon Chart data.",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js",
+      "test": "echo \"No tests specified\" && exit 0"
+    },
+    "author": " Name",
+    "license": "MIT",
+    "dependencies": {
+      "fs": "0.0.1-security",
+      "playwright": "1.34.0"
+    }
+  }
